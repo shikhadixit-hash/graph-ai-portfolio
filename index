@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Shikha Dixit - Generative AI Portfolio</title>
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+            --text-dark: #2d3748;
+            --text-light: #f7fafc;
+            --bg-white: #ffffff;
+            --bg-off-white: #f8fafc;
+            --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--bg-off-white);
+        }
+
+        /* Header / Hero Section */
+        header {
+            background: var(--primary-gradient);
+            color: var(--text-light);
+            padding: 4rem 2rem;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #4a5568;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 4px;
+            background: var(--secondary-gradient);
+            margin-top: 8px;
+            border-radius: 2px;
+        }
+
+        /* About Me */
+        .about-me {
+            background: var(--bg-white);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            box-shadow: var(--card-shadow);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .about-me h3 {
+            font-size: 1.5rem;
+            color: #2d3748;
+        }
+
+        .highlight {
+            color: #5a67d8;
+            font-weight: 600;
+        }
+
+        /* About Course */
+        .course-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .course-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--card-shadow);
+            border-top: 5px solid #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .module-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .module-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+        }
+
+        .module-list li::before {
+            content: '•';
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-right: 0.75rem;
+            line-height: 1;
+        }
+
+        .module-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Weekly Submissions */
+        .submissions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .submission-card {
+            background: linear-gradient(to bottom right, #ffffff, #f8fafc);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .submission-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .submission-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            background: var(--secondary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .submission-card h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .placeholder-text {
+            color: #a0aec0;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: var(--text-light);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .container { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Generative AI for Work & Research</h1>
+        <p>No-Code AI Tools for Responsible Task Automation</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="about-me">
+            <h2>About Me</h2>
+            <div class="about-me">
+                <h3>Dr. Shikha Dixit</h3>
+                <p class="highlight">Deputy Director, Environmental Health & Geospatial Sciences</p>
+                <p>
+                    I am a researcher specializing in <strong>Geo-spatial Epidemiology</strong> with extensive experience in planning, implementation, and monitoring of health and environmental projects. [cite_start]Currently serving at <em>The INCLEN Trust International</em> in New Delhi, I focus on data analysis, research writing, and piloting tools for public health surveillance. [cite: 264, 276]
+                </p>
+                <p>
+                    With a Ph.D. in Medical Geography from the University of Allahabad and a Post Graduate Diploma in Geoinformatics, I am passionate about leveraging technology to solve complex environmental and health challenges. [cite_start]This portfolio documents my journey in mastering Generative AI tools to enhance research productivity and automation. [cite: 264]
+                </p>
+            </div>
+        </section>
+
+        <section id="about-course">
+            <h2>About The Course</h2>
+            <div class="course-info">
+                <div class="course-card">
+                    <h3>Course Overview</h3>
+                    <p style="margin-top: 1rem;">
+                        This 8-week live cohort course focuses on leveraging Generative AI for research productivity and task automation. [cite_start]The curriculum covers the responsible use of No-Code AI tools to streamline workflows, from data analysis and document creation to building custom chatbots and automation agents. [cite: 161, 162]
+                    </p>
+                </div>
+                <div class="course-card">
+                    <h3>Curriculum Modules</h3>
+                    <ul class="module-list">
+                        [cite_start]<li><strong>Module 1:</strong> Websites, Documents & Presentations [cite: 187]</li>
+                        [cite_start]<li><strong>Module 2:</strong> AI-Automated Data Analysis [cite: 198]</li>
+                        [cite_start]<li><strong>Module 3:</strong> GenAI for Research & Text Analysis [cite: 209]</li>
+                        [cite_start]<li><strong>Module 4:</strong> Custom GPTs and Chatbots [cite: 224]</li>
+                        [cite_start]<li><strong>Module 5:</strong> AI for Task Automation [cite: 232]</li>
+                        [cite_start]<li><strong>Module 6:</strong> GenAI for Communication & Outreach [cite: 242]</li>
+                        [cite_start]<li><strong>Module 7:</strong> Capstone Project & Showcase [cite: 254]</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="submissions">
+            <h2>Weekly Submissions</h2>
+            <div class="submissions-grid">
+                <div class="submission-card">
+                    <div class="submission-icon">Week 1</div>
+                    <h4>Websites & Docs</h4>
+                    <p class="placeholder-text">Submission link coming soon...</p>
+                </div>
+                <div class="submission-card">
+                    <div class="submission-icon">Week 2</div>
+                    <h4>Data Analysis</h4>
+                    <p class="placeholder-text">Submission link coming soon...</p>
+                </div>
+                <div class="submission-card">
+                    <div class="submission-icon">Week 3</div>
+                    <h4>Text Analysis</h4>
+                    <p class="placeholder-text">Submission link coming soon...</p>
+                </div>
+                <div class="submission-card">
+                    <div class="submission-icon">Week 4</div>
+                    <h4>Custom GPTs</h4>
+                    <p class="placeholder-text">Submission link coming soon...</p>
+                </div>
+                <div class="submission-card">
+                    <div class="submission-icon">Week 5</div>
+                    <h4>Task Automation</h4>
+                    <p class="placeholder-text">Submission link coming soon...</p>
+                </div>
+                <div class="submission-card">
+                    <div class="submission-icon">Week 6</div>
+                    <h4>Communication</h4>
+                    <p class="placeholder-text">Submission link coming soon...</p>
+                </div>
+                <div class="submission-card">
+                    <div class="submission-icon">Week 7</div>
+                    <h4>Capstone Draft</h4>
+                    <p class="placeholder-text">Submission link coming soon...</p>
+                </div>
+                <div class="submission-card">
+                    <div class="submission-icon">Week 8</div>
+                    <h4>Final Showcase</h4>
+                    <p class="placeholder-text">Submission link coming soon...</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Dr. Shikha Dixit. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
